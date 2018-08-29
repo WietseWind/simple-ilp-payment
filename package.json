@@ -1,0 +1,16 @@
+{
+  "name": "send-ilp-payment-test",
+  "version": "0.0.1",
+  "description": "Send money (XRP) using ILP (Test)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wietse Wind <mail@wietse.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ilp-plugin": "^3.2.0",
+    "ilp-protocol-stream": "^1.6.0",
+    "node-fetch": "^2.2.0"
+  }
+}
