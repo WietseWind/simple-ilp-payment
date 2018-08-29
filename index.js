@@ -5,6 +5,7 @@ const { createConnection } = require('ilp-protocol-stream')
 const { URL } = require('url')
 const fetch = require('node-fetch')
 
+// To request info from the ILP payment pointer (who are you, what's our shared secret?)
 async function query (receiver) {
   const endpoint = new URL(receiver.startsWith('$') ? 'https://' + receiver.substring(1) : receiver)
   endpoint.pathname = endpoint.pathname === '/' ? '/.well-known/pay' : endpoint.pathname
@@ -27,6 +28,7 @@ async function query (receiver) {
   }
 }
 
+// To start sending the payment
 const pay = (destination, amount) => {
   return new Promise((resolve, reject) => {
     return (async () => {
@@ -77,6 +79,7 @@ const pay = (destination, amount) => {
   })
 }
 
+// Now start the payment :)
 pay('$twitter.xrptipbot.com/WietseWind/Test/', 5000).then(payment => {
   console.log(`\n:D Sent ${payment.amount} to ${payment.destination} in ${payment.packets} packets\n`)
 })
