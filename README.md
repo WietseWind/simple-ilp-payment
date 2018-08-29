@@ -9,6 +9,8 @@ Tested with local `moneyd` instance on XRP livenet.
 
 A total of `5000` drops will be sent to `$twitter.xrptipbot.com/WietseWind` (line ~ 80).
 
+![](https://aapbz55.dlvr.cloud/ilpay.gif)
+
 # Credits
 
 Based on:
